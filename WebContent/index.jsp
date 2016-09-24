@@ -38,7 +38,7 @@
 
 <div>
 
-Login by SPN Active directory: <a href="GoogleAuth/spnlogin"> Click here</a>
+Login by SPN Active directory: <a href="spnlogin"> Click here</a>
 
 </div>
 
