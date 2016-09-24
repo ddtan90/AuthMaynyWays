@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="authen" size="1145,596" id="" metadata="uml2-1.0" initialized="true" scrolledY="291" tag="10" key="32303037303533312D313020476F6F676C6541757468">
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.5/@sourceConnections.0 //@children.4/@sourceConnections.0 //@children.1/@sourceConnections.0" name="AuthenBaseHandler" location="150,165" size="270,95" id="com.tan.authen/AuthenBaseHandler" runTimeClassModel="authen(Ljava.util.Map;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="247,18">
+      <children xsi:type="editmodel:MethodEditModel" name="authen" location="2,69" id="com.tan.authen/AuthenBaseHandler#authen(Ljava.util.Map;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true" showAssociationMember="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="BasicAuthenHandler" location="510,45" size="270,81" id="com.tan.authen/BasicAuthenHandler" runTimeClassModel="authen(Ljava.util.Map;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="247,18">
+      <children xsi:type="editmodel:MethodEditModel" name="authen" id="com.tan.authen/BasicAuthenHandler#authen(Ljava.util.Map;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" id="com.tan.authen/AuthenBaseHandler&lt;-com.tan.authen/BasicAuthenHandler" source="//@children.1" target="//@children.0" targetEnd="//@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.1/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,35" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="270,16" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true" showAssociationMember="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="FacebookOAuthHandler" location="855,180" size="270,171" id="com.tan.authen/FacebookOAuthHandler" runTimeClassModel="authen(Ljava.util.Map;),getUserInfo(Ljava.lang.String;),createLoginLink(),authenticatedCallback(Ljava.lang.String;),verifyUser(Ljava.lang.String;),getToken(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="247,108">
+      <children xsi:type="editmodel:MethodEditModel" name="authenticatedCallback" id="com.tan.authen/FacebookOAuthHandler#authenticatedCallback(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="authen" id="com.tan.authen/FacebookOAuthHandler#authen(Ljava.util.Map;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createLoginLink" id="com.tan.authen/FacebookOAuthHandler#createLoginLink()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getToken" id="com.tan.authen/FacebookOAuthHandler#getToken(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getUserInfo" id="com.tan.authen/FacebookOAuthHandler#getUserInfo(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="verifyUser" id="com.tan.authen/FacebookOAuthHandler#verifyUser(Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" id="com.tan.authen/OAuth20Handler&lt;-com.tan.authen/FacebookOAuthHandler" source="//@children.2" target="//@children.5" targetEnd="//@children.2/@sourceConnections.0/@children.1" sourceEnd="//@children.2/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,153" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="267,125"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true" showAssociationMember="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="GoogleOAuthenHandler" location="855,360" size="270,171" id="com.tan.authen/GoogleOAuthenHandler" runTimeClassModel="authen(Ljava.util.Map;),getUserInfo(Ljava.lang.String;),createLoginLink(),authenticatedCallback(Ljava.lang.String;),verifyUser(Ljava.lang.String;),getToken(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="247,108">
+      <children xsi:type="editmodel:MethodEditModel" name="authenticatedCallback" id="com.tan.authen/GoogleOAuthenHandler#authenticatedCallback(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="authen" id="com.tan.authen/GoogleOAuthenHandler#authen(Ljava.util.Map;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createLoginLink" id="com.tan.authen/GoogleOAuthenHandler#createLoginLink()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getToken" id="com.tan.authen/GoogleOAuthenHandler#getToken(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getUserInfo" id="com.tan.authen/GoogleOAuthenHandler#getUserInfo(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="verifyUser" id="com.tan.authen/GoogleOAuthenHandler#verifyUser(Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" id="com.tan.authen/OAuth20Handler&lt;-com.tan.authen/GoogleOAuthenHandler" source="//@children.3" target="//@children.5" targetEnd="//@children.3/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,90" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="267,132"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true" showAssociationMember="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="LdapAuthenHandler" location="510,165" size="270,135" id="com.tan.authen/LdapAuthenHandler" runTimeClassModel="authen(Ljava.util.Map;),port,serverName,verifyUser(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="112,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="port" id="com.tan.authen/LdapAuthenHandler#port"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="serverName" id="com.tan.authen/LdapAuthenHandler#serverName"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="247,36">
+      <children xsi:type="editmodel:MethodEditModel" name="authen" id="com.tan.authen/LdapAuthenHandler#authen(Ljava.util.Map;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="verifyUser" id="com.tan.authen/LdapAuthenHandler#verifyUser(Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" id="com.tan.authen/AuthenBaseHandler&lt;-com.tan.authen/LdapAuthenHandler" source="//@children.4" target="//@children.0" targetEnd="//@children.4/@sourceConnections.0/@children.1" sourceEnd="//@children.4/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,84" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="270,51" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true" showAssociationMember="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.3/@sourceConnections.0 //@children.2/@sourceConnections.0" name="OAuth20Handler" location="511,315" size="267,261" id="com.tan.authen/OAuth20Handler" runTimeClassModel="resourceServerPort,secretKey,authenServerName,getUserInfo(Ljava.lang.String;),appId,createLoginLink(),authenServerPort,verifyUser(Ljava.lang.String;),authenticatedCallback(Ljava.lang.String;),resourceServerName,getToken(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="157,108">
+      <children xsi:type="editmodel:AttributeEditModel" name="appId" id="com.tan.authen/OAuth20Handler#appId"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="authenServerName" id="com.tan.authen/OAuth20Handler#authenServerName"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="authenServerPort" id="com.tan.authen/OAuth20Handler#authenServerPort"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="resourceServerName" id="com.tan.authen/OAuth20Handler#resourceServerName"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="resourceServerPort" id="com.tan.authen/OAuth20Handler#resourceServerPort"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="secretKey" id="com.tan.authen/OAuth20Handler#secretKey"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="244,90">
+      <children xsi:type="editmodel:MethodEditModel" name="authenticatedCallback" id="com.tan.authen/OAuth20Handler#authenticatedCallback(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createLoginLink" id="com.tan.authen/OAuth20Handler#createLoginLink()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getToken" id="com.tan.authen/OAuth20Handler#getToken(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getUserInfo" id="com.tan.authen/OAuth20Handler#getUserInfo(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="verifyUser" id="com.tan.authen/OAuth20Handler#verifyUser(Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="com.tan.authen/AuthenBaseHandler&lt;-com.tan.authen/OAuth20Handler" source="//@children.5" target="//@children.0" targetEnd="//@children.5/@sourceConnections.0/@children.1" sourceEnd="//@children.5/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,10" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="260,95"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true" showAssociationMember="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="AuthenticationManagement" location="15,360" size="430,153" id="com.tan.authen/AuthenticationManagement">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="407,90">
+      <children xsi:type="editmodel:MethodEditModel" name="activeAuthenMethod" id="com.tan.authen/AuthenticationManagement#activeAuthenMethod(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="callbackCreateNewAuthenMethod" id="com.tan.authen/AuthenticationManagement#callbackCreateNewAuthenMethod()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createNewAuthenMethod" id="com.tan.authen/AuthenticationManagement#createNewAuthenMethod(ILjava.util.Map;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deactiveAuthenMethod" id="com.tan.authen/AuthenticationManagement#deactiveAuthenMethod(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="removeAuthenMethod" id="com.tan.authen/AuthenticationManagement#removeAuthenMethod(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true" showAssociationMember="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1;Product=eUML2" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true" showAssociationMember="true"/>
+</editmodel:ClassDiagramEditModel>
