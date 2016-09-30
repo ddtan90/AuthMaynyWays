@@ -22,7 +22,6 @@ import javax.servlet.http.HttpServletResponse;
 public class GoogleCallback extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-	static String className = "com.sl.Oauth2callback";
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {

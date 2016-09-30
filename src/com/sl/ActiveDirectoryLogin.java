@@ -13,11 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/loginLDAP")
 public class ActiveDirectoryLogin extends HttpServlet {
-	
-	public ActiveDirectoryLogin() {
-		super();
-		System.out.println(System.getProperty("user.dir"));
-	}
 
 	private static final long serialVersionUID = 1L;
 
