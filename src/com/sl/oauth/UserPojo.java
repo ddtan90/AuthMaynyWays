@@ -1,4 +1,4 @@
-package com.sl;
+package com.sl.oauth;
 
 public class UserPojo {
 	private String id;

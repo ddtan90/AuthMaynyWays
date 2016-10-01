@@ -1,12 +1,17 @@
-package com.sl;
+package com.sl.oauth;
+
+import com.google.gson.Gson;
+import com.sl.serverinfo.GoogleInfo;
+import com.sl.utils.GsonUtility;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
+import java.net.URLConnection;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,45 +19,40 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.google.gson.Gson;
-import com.sl.serverinfo.FacebookInfo;
-
-@WebServlet("/facebookcallback")
-public class FacebookCallback extends HttpServlet {
+@WebServlet("/googlecallback")
+public class GoogleCallback extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
+			GoogleInfo info = new GoogleInfo();
 			String code = request.getParameter("code");
-
-			FacebookInfo info = new FacebookInfo();
-			URL url = new URL("https://graph.facebook.com/oauth/access_token?client_id=" + info.getAppId() + "&redirect_uri="
-					+ info.getRedirectUrl() + "&client_secret=" + info.getSecretKey() + "&code=" + code);
-
+			String urlParameters = "code=" + code + "&client_id=" + info.getAppId() + "&client_secret=" + info.getSecretKey()
+					+ "&redirect_uri=" + info.getRedirectUrl() + "&grant_type=authorization_code";
+			URL url = new URL("https://accounts.google.com/o/oauth2/token");
+			URLConnection conn = url.openConnection();
+			conn.setDoOutput(true);
+			OutputStreamWriter writer = new OutputStreamWriter(conn.getOutputStream());
+			writer.write(urlParameters);
+			writer.flush();
 			String line1 = "";
-			BufferedReader reader = new BufferedReader(new InputStreamReader((InputStream) url.getContent()));
+			BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 			String line;
 			while ((line = reader.readLine()) != null) {
 				line1 = line1 + line;
 			}
-			String[] arr = line1.split("&");
-			String token = "";
-			for (String p : arr) {
-				String tmp[] = p.split("=");
-				if (tmp[0].equals("access_token")) {
-					token = tmp[1];
-					break;
-				}
-			}
-			url = new URL("https://graph.facebook.com/me?access_token=" + token);
+			String s = GsonUtility.getJsonElementString("access_token", line1);
+
+			url = new URL("https://www.googleapis.com/oauth2/v1/userinfo?access_token=" + s);
+			conn = url.openConnection();
 			line1 = "";
-			reader = new BufferedReader(new InputStreamReader((InputStream) url.getContent()));
+			reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 			while ((line = reader.readLine()) != null) {
 				line1 = line1 + line;
 			}
 			UserPojo data = (UserPojo) new Gson().fromJson(line1, UserPojo.class);
-			// writer.close();
+			writer.close();
 			reader.close();
 			request.setAttribute("auth", data);
 			request.getRequestDispatcher("/info.jsp").forward(request, response);

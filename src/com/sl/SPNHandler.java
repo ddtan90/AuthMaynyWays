@@ -19,5 +19,4 @@ public class SPNHandler extends HttpServlet {
 
 		req.getRequestDispatcher("/hello.jsp").forward(req, resp);
 	}
-
 }

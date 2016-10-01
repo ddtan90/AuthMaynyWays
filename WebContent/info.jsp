@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<%@page import="com.sl.GlobalCons"%>
-<%@page import="com.sl.UserPojo"%>
+<%@page import="com.sl.oauth.GlobalCons"%>
+<%@page import="com.sl.oauth.UserPojo"%>
 <html>
 <head>
 <title>DEMO - Login With Google using Java</title>
@@ -19,10 +19,7 @@
       <td>Name</td>
       <td><%=gp.getName()%></td>
     </tr>
-    <tr>
-      <td>Email</td>
-      <td><%=gp.getEmail()%></td>
-    </tr>
+   
     
     
   </table> 

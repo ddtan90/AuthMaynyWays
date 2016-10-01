@@ -1,4 +1,4 @@
-package com.sl;
+package com.sl.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;

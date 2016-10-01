@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@page import="com.sl.oauth.OauthProperties"%>
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -70,6 +71,9 @@ Login by SPN Active directory: <a href="spnlogin"> Click here</a>
 </div>
 
 
+
+
+<a href='<% out.print(OauthProperties.getProperty("oauthen.loginURL")); %>'> Login by OAuth 2.0</a>
 
 </body>
 </html>

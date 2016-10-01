@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.sl.oauth.UserPojo;
+
 @WebServlet("/loginLDAP")
 public class ActiveDirectoryLogin extends HttpServlet {
 
